@@ -1,12 +1,15 @@
 import React from 'react';
 import classes from './Posts.module.css'
+import Post from "../Post/Post";
 
-function Posts()  {
+const Posts = () => {
 	return (
-		<div className={classes.profile}>
-			<div>Profile</div>
+		<div className={classes.posts}>
+			<Post message='Hey everyone!' likesCount='5'/>
+			<Post message='blablabla' likesCount='0'/>
+			<Post message='trrrrrrrr' likesCount='25'/>
 		</div>
-				)
+	)
 }
 
-export default Posts
+export default Posts;

@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Header.module.css'
 
-function Header() {
+const Header = () => {
 	return (
 		<div className={classes.header}>
 			<a href="#" className={classes.logoLink}>

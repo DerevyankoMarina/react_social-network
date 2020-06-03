@@ -1,12 +1,18 @@
 import React from 'react';
-import classes from './Profile.module.css'
+import banner from "../../images/banner.JPG";
 
-function Profile()  {
+import classes from './Profile.module.css'
+import MyPost from "./MyPost/MyPost";
+import Posts from "./Posts/Posts";
+
+const Profile = () => {
 	return (
 		<div className={classes.profile}>
-			<div>Profile</div>
+			<div className={classes.banner}></div>
+			<MyPost/>
+			<Posts/>
 		</div>
 				)
 }
 
-export default Profile
+export default Profile;

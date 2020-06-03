@@ -1,6 +1,7 @@
-.profile {
-    grid-area: c;
-    background: rosybrown;
-    min-height: 500px;
-    padding: 10px;
+.profile .banner {
+    max-width: 1000px;
+    min-height: 200px;
+    background-image: url("../../images/banner.JPG");
+    background-size: cover;
+    background-position: center;
 }

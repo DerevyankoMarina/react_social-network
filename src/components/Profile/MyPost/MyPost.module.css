@@ -1,0 +1,22 @@
+.mypost {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.mypost_Header {
+
+}
+
+.mypost_textarea {
+    margin-bottom: 20px;
+    background: #ccc;
+}
+
+.mypost_button {
+    width: 50px;
+    align-self: flex-end;
+    background: green;
+    border-color: green;
+    color: #ffffff;
+}
