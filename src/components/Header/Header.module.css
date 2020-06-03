@@ -1,0 +1,17 @@
+.header {
+    grid-area: h;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: start ;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logoLink {
+    margin-left: 20px;
+}
