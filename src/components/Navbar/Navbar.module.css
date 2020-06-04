@@ -4,3 +4,12 @@
     padding: 10px;
 }
 
+.navbar a {
+    text-decoration: none;
+
+}
+
+.navbar a.active {
+    color: gold;
+}
+
