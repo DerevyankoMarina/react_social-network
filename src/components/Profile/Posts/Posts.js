@@ -2,12 +2,12 @@ import React from 'react';
 import classes from './Posts.module.css'
 import Post from "../Post/Post";
 
-const Posts = () => {
+const Posts = (props) => {
 	return (
 		<div className={classes.posts}>
-			<Post message='Hey everyone!' likesCount='5'/>
-			<Post message='blablabla' likesCount='0'/>
-			<Post message='trrrrrrrr' likesCount='25'/>
+			{props.posts.map( post =>
+				<Post message={post.message} likesCount={post.likesCount}/>
+			)}
 		</div>
 	)
 }

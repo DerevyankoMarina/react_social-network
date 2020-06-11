@@ -1,32 +1,28 @@
 import React from 'react';
 import classes from './Dialogs.module.css'
-import {NavLink} from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-const Dialogs = () => {
+const Dialogs = (props) => {
+	debugger;
+	let dialogElements = props.dialogsPage.dialogs.map(d =>
+		<DialogItem id={d.id} name={d.name}/>
+	)
+
+	let messageElements = props.dialogsPage.messages.map(m =>
+		<Message id={m.id} message={m.message}/>
+	)
+
 	return (
-		<React.Fragment>
+		<div className={classes.dialogsWrapper}>
+			{/*<h3>DIALOGS</h3>*/}
 			<div className={classes.dialogs}>
-				<div className={classes.dialogItem}>
-					<NavLink to='dialogs/1'>John</NavLink>
-				</div>
-				<div className={classes.dialogItem}>
-					<NavLink to='dialogs/1'>Sherlock</NavLink>
-				</div>
-				<div className={classes.dialogItem}>
-					<NavLink to='dialogs/1'>Mary</NavLink>
-				</div>
-				<div className={classes.dialogItem}>
-					<NavLink to='dialogs/1'>Selena</NavLink>
-				</div>
-				<div className={classes.dialogItem}>
-					<NavLink to='dialogs/1'>Mike</NavLink>
-				</div>
+				{dialogElements}
 			</div>
 			<div className={classes.messages}>
-				<div className={classes.messagesItem}>Hey!</div>
-				<div className={classes.messagesItem}>How are you?</div>
+				{messageElements}
 			</div>
-		</React.Fragment>
+		</div>
 	)
 };
 

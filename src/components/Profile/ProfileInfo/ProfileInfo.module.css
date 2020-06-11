@@ -1,0 +1,11 @@
+.banner {
+    max-width: 1000px;
+    min-height: 200px;
+    background-image: url("../../../images/banner.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.info {
+    padding: 20px;
+}

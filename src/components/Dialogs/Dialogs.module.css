@@ -1,9 +1,21 @@
+.dialogsWrapper {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    padding: 10px;
+
+}
 .dialogs {
     padding: 10px;
 }
 
 .dialogItem {
+    padding-bottom: 15px;
+}
 
+.dialogItem a{
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
 }
 
 .messages {
