@@ -1,12 +1,10 @@
 .navbar {
-    grid-area: n;
-    background: aquamarine;
-    padding: 10px;
+    margin-bottom: 30px;
 }
 
 .navbar a {
     text-decoration: none;
-
+    color: #4d85e9;
 }
 
 .navbar a.active {

@@ -4,7 +4,6 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-	debugger;
 	let dialogElements = props.dialogsPage.dialogs.map(d =>
 		<DialogItem id={d.id} name={d.name}/>
 	)
@@ -15,11 +14,12 @@ const Dialogs = (props) => {
 
 	return (
 		<div className={classes.dialogsWrapper}>
-			{/*<h3>DIALOGS</h3>*/}
 			<div className={classes.dialogs}>
+				<h3>Dialogs</h3>
 				{dialogElements}
 			</div>
 			<div className={classes.messages}>
+				<h3>Messages</h3>
 				{messageElements}
 			</div>
 		</div>

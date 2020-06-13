@@ -1,0 +1,26 @@
+.friendItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.friendItem:last-child {
+    margin-right: 0;
+}
+
+.ava {
+    width: 40px;
+    height: 40px;
+    background: orange;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 13px;
+}
+
+.name {
+    color: white;
+    font-size: 12px;
+}

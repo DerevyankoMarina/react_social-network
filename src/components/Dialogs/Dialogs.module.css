@@ -6,9 +6,13 @@
 }
 .dialogs {
     padding: 10px;
+    border-right: 2px solid #945858;
 }
 
 .dialogItem {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
     padding-bottom: 15px;
 }
 
@@ -16,6 +20,17 @@
     text-decoration: none;
     color: darkgreen;
     font-weight: bold;
+}
+
+.ava {
+    width: 40px;
+    height: 40px;
+    background: orange;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 13px;
 }
 
 .messages {
