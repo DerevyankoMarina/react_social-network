@@ -1,0 +1,17 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    background: #ccc;
+}
+
+.button {
+    width: 50px;
+    align-self: flex-end;
+    background: green;
+    border-color: green;
+    color: #ffffff;
+}

@@ -33,6 +33,10 @@
     font-size: 13px;
 }
 
+.messagesContainer {
+    margin-bottom: 20px;
+}
+
 .messages {
     padding: 10px;
 }

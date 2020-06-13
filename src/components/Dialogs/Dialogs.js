@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import TextArea from "../common/TextArea/TextArea";
 
 const Dialogs = (props) => {
 	let dialogElements = props.dialogsPage.dialogs.map(d =>
@@ -20,7 +21,10 @@ const Dialogs = (props) => {
 			</div>
 			<div className={classes.messages}>
 				<h3>Messages</h3>
-				{messageElements}
+				<div className={classes.messagesContainer}>
+					{messageElements}
+				</div>
+				<TextArea/>
 			</div>
 		</div>
 	)
