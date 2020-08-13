@@ -1,11 +1,13 @@
 import React from 'react';
 import classes from './TextArea.module.css'
 
-const TextArea = () => {
+const TextArea = (props) => {
 	let myFirstRef = React.createRef();
 
 	let buttonHandler = () => {
-		alert(myFirstRef.current.value);
+		let val = myFirstRef.current.value;
+		props.addPost(val);
+		myFirstRef.current.value = '';
 	}
 
 	return (
