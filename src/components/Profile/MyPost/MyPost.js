@@ -6,7 +6,11 @@ const MyPost = (props) => {
 	return (
 		<div className={classes.mypost}>
 			<h3>My posts</h3>
-			<TextArea addPost={props.addPost}/>
+			<TextArea
+				addPost={props.addPost}
+				newPostText={props.newPostText}
+				updateNewPostText={props.updateNewPostText}
+			/>
 		</div>
 	)
 }

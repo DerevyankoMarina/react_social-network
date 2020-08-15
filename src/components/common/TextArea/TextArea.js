@@ -5,14 +5,23 @@ const TextArea = (props) => {
 	let myFirstRef = React.createRef();
 
 	let buttonHandler = () => {
-		let val = myFirstRef.current.value;
-		props.addPost(val);
-		myFirstRef.current.value = '';
+		props.addPost();
+	}
+
+	let onPostChange = () => {
+		let text = myFirstRef.current.value;
+		props.updateNewPostText(text);
 	}
 
 	return (
 		<div className={classes.wrap}>
-			<textarea className={classes.textarea} ref={myFirstRef} placeholder='Enter some test'></textarea>
+			<textarea
+				className={classes.textarea}
+				ref={myFirstRef}
+				placeholder='Add you comment'
+				value={props.newPostText}
+				onChangeCapture={onPostChange}
+			/>
 			<button className={classes.button} onClick={buttonHandler}>Send</button>
 		</div>
 	)
