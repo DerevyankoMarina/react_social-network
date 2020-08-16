@@ -7,8 +7,8 @@ const MyPost = (props) => {
 		<div className={classes.mypost}>
 			<h3>My posts</h3>
 			<TextArea
-				addPost={props.addPost}
 				newPostText={props.newPostText}
+				addPost={props.addPost}
 				updateNewPostText={props.updateNewPostText}
 			/>
 		</div>
