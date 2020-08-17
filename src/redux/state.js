@@ -31,28 +31,29 @@ let store = {
 			]
 		},
 	},
+	_callSubscriber() {},
 	getState() {
 		return this._state;
 	},
-	addPost() {
-		let post = {
-			id: 4,
-			message: this._state.profilePage.newPostText,
-			likesCount: 0
-		}
-		this._state.profilePage.posts.push(post);
-		this._state.profilePage.newPostText = '';
-		this._callSubscriber();
-	},
-	updateNewPostText(newText) {
-		this._state.profilePage.newPostText = newText;
-		this._callSubscriber();
-	},
-	_callSubscriber() {},
 	subscribe(observer) {
 		this._callSubscriber = observer;
 		this._callSubscriber();
 	},
+	dispatch(action) {
+		if (action.type === 'ADD-POST') {
+			let post = {
+				id: 4,
+				message: this._state.profilePage.newPostText,
+				likesCount: 0
+			}
+			this._state.profilePage.posts.push(post);
+			this._state.profilePage.newPostText = '';
+			this._callSubscriber();
+		} else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+			this._state.profilePage.newPostText = action.newText;
+			this._callSubscriber();
+		}
+	}
 }
 
 export default store;
