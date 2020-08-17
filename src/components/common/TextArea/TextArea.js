@@ -1,16 +1,17 @@
 import React from 'react';
+import {addPostCreator, updateNewPostTextCreator} from '../../../redux/state'
 import classes from './TextArea.module.css'
 
 const TextArea = (props) => {
 	let myFirstRef = React.createRef();
 
 	let buttonHandler = () => {
-		props.dispatch({type: 'ADD-POST'});
+		props.dispatch(addPostCreator());
 	}
 
 	let onPostChange = () => {
 		let text = myFirstRef.current.value;
-		let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text};
+		let action = updateNewPostTextCreator(text);
 		props.dispatch(action);
 	}
 

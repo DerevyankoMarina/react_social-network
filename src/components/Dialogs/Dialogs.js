@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import TextArea from "../common/TextArea/TextArea";
+import {addMessageCreator, updateNewMessageTextCreator} from "../../redux/state";
 
 const Dialogs = (props) => {
 	let dialogElements = props.dialogsPage.dialogs.map(d =>
@@ -12,6 +12,15 @@ const Dialogs = (props) => {
 	let messageElements = props.dialogsPage.messages.map(m =>
 		<Message id={m.id} message={m.message}/>
 	)
+
+	let onTextChange = (e) => {
+		let text = e.target.value;
+		props.dispatch(updateNewMessageTextCreator(text));
+	}
+
+	let buttonHandler = () => {
+		props.dispatch(addMessageCreator());
+	}
 
 	return (
 		<div className={classes.dialogsWrapper}>
@@ -24,7 +33,15 @@ const Dialogs = (props) => {
 				<div className={classes.messagesContainer}>
 					{messageElements}
 				</div>
-				<TextArea/>
+				<div className={classes.wrap}>
+				<textarea
+					className={classes.textarea}
+					placeholder='Add new message'
+					value={props.dialogsPage.newMessageText}
+					onChange={onTextChange}
+				/>
+					<button className={classes.button} onClick={buttonHandler}>Send</button>
+				</div>
 			</div>
 		</div>
 	)
