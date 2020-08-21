@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-export let renderApp = (state) => {
+export let renderApp = () => {
 	ReactDOM.render(
 		<React.StrictMode>
 			<App state={store.getState()} dispatch={store.dispatch.bind(store)}/>

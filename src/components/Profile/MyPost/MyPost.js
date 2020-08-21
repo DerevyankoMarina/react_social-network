@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './MyPost.module.css'
-import {addPostCreator, updateNewPostTextCreator} from "../../../redux/state";
+import {addPostCreator, updateNewPostTextCreator} from "../../../redux/profilePage-reducer";
 
 const MyPost = (props) => {
 	let myFirstRef = React.createRef();
