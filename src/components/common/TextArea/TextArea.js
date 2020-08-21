@@ -1,5 +1,5 @@
 import React from 'react';
-import {addPostCreator, updateNewPostTextCreator} from '../../../redux/state'
+import {addPostCreator, updateNewPostTextCreator} from '../../../redux/store'
 import classes from './TextArea.module.css'
 
 const TextArea = (props) => {
