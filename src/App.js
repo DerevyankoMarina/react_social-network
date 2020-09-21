@@ -4,8 +4,8 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
 import Sidebar from "./components/Sidebar/Sidebar";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
 	return (
@@ -15,10 +15,10 @@ const App = (props) => {
 				<Sidebar sidebar={props.state.sidebar}/>
 				<div className="app-wrapper-content">
 					<Route path='/profile' render={() =>
-						<Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>
+						<Profile profilePage={props.state.profilePage} store={props.store}/>
 					}/>
 					<Route path='/dialogs' render={() =>
-						<Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch}/>
+						<DialogsContainer store={props.store}/>
 					}/>
 				</div>
 			</div>

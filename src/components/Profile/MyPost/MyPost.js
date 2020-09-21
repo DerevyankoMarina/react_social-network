@@ -1,18 +1,15 @@
 import React from 'react';
 import classes from './MyPost.module.css'
-import {addPostCreator, updateNewPostTextCreator} from "../../../redux/profilePage-reducer";
 
 const MyPost = (props) => {
 	let myFirstRef = React.createRef();
 
-	let buttonHandler = () => {
-		props.dispatch(addPostCreator());
+	let onSendMessage = () => {
+		props.sendMessage();
 	}
 
 	let onPostChange = () => {
-		let text = myFirstRef.current.value;
-		let action = updateNewPostTextCreator(text);
-		props.dispatch(action);
+		props.updateNewPostText(myFirstRef.current.value)
 	}
 
 	return (
@@ -26,7 +23,7 @@ const MyPost = (props) => {
 					value={props.newPostText}
 					onChange={onPostChange}
 				/>
-				<button className={classes.button} onClick={buttonHandler}>Send</button>
+				<button className={classes.button} onClick={onSendMessage}>Send</button>
 			</div>
 		</div>
 	)
