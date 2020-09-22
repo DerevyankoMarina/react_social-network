@@ -2,15 +2,18 @@ import store from './redux/redux-store';
 //import store from './redux/store';
 import * as serviceWorker from './serviceWorker';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
 export let renderApp = (state) => {
 	ReactDOM.render(
-		<React.StrictMode>
-			<App state={state} store={store}/>
-		</React.StrictMode>,
+		<Provider store={store}>
+			<React.StrictMode>
+				<App state={store.getState()}/>
+			</React.StrictMode>
+		</Provider>,
 		document.getElementById('root')
 	);
 }

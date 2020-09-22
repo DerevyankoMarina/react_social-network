@@ -15,10 +15,10 @@ const App = (props) => {
 				<Sidebar sidebar={props.state.sidebar}/>
 				<div className="app-wrapper-content">
 					<Route path='/profile' render={() =>
-						<Profile profilePage={props.state.profilePage} store={props.store}/>
+						<Profile profilePage={props.state.profilePage}/>
 					}/>
 					<Route path='/dialogs' render={() =>
-						<DialogsContainer store={props.store}/>
+						<DialogsContainer/>
 					}/>
 				</div>
 			</div>

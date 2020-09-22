@@ -22,12 +22,17 @@ let dialogsPageReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_MESSAGE:
 			let message = { id: 3, message: state.newMessageText}
-			state.messages.push(message);
-			state.newMessageText = '';
-			return state;
-		case UPDATE_NEW_MESSAGE_TEXT:
-			state.newMessageText = action.newMessage;
-			return state;
+			return {
+				...state,
+				newMessageText: '',
+				messages: [...state.messages, message]
+			};
+		case UPDATE_NEW_MESSAGE_TEXT: {
+			return {
+				...state,
+				newMessageText: action.newMessage
+			}
+		}
 		default:
 			return state;
 	}
